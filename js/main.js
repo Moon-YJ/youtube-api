@@ -13,17 +13,18 @@ const result_url = `${base_url}?part=snippet&key=${api_key}&playlistId=${playlis
 
 fetch(result_url)
 	.then((data) => data.json())
-	.then((json) => {
-		console.log(json.items);
-		let tags = '';
-		json.items.forEach((el) => {
-			tags += `
+	.then((json) => setUrl(json.items));
+
+function setUrl(arr) {
+	let tags = '';
+	arr.forEach((el) => {
+		tags += `
         <article>
           <img src=${el.snippet.thumbnails.standard.url} />
           <h2>${el.snippet.title}<h2/>
           <p>${el.snippet.description}</p>
         </article>
       `;
-		});
-		document.body.innerHTML = tags;
 	});
+	document.body.innerHTML = tags;
+}
