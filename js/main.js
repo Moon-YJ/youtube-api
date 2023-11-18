@@ -6,7 +6,7 @@ const result_url = `${base_url}?part=snippet&key=${api_key}&playlistId=${playlis
 
 /*
   GET 방식
-    - 브라우저 URL을 통해서 데이터 요청 방식
+    - 브라우저 URL을 통해서 쿼리스트링 형식으로 데이터를 요청하는 방식
     - 요청 URL: 기본URL?name=value&name=value
     - QueryString: 기본 요청 URL ?물음표 뒤로 name=value 세트로 옵션을 담아서 전달하는 방식
 */
