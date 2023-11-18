@@ -1,5 +1,5 @@
 const api_key = 'AIzaSyB81cXmxoWdzbYs8QZUlN_LQskZFT_Xqoo';
-const playlist_id = 'PLMaY0ixOiyljR7EsFnCk9HPiR7eNsI6Yd';
+const playlist_id = 'PLMaY0ixOiylhMzTSeHXmbE-6qLm2t-qkU';
 const base_url = 'https://www.googleapis.com/youtube/v3/playlistItems';
 const num = 7;
 const result_url = `${base_url}?part=snippet&key=${api_key}&playlistId=${playlist_id}&maxResults=${num}`;
@@ -19,7 +19,7 @@ fetch(result_url)
 		json.items.forEach((el) => {
 			tags += `
         <article>
-          <img src=${el.snippet.thumbnails.standard.url}/>
+          <img src=${el.snippet.thumbnails.standard.url} />
           <h2>${el.snippet.title}<h2/>
           <p>${el.snippet.description}</p>
         </article>
